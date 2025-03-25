@@ -51,3 +51,11 @@ At a high level, *llm_operations.py* is the core module requested by *json_edito
 - The JSON data used in this project has been sourced from the following repository: [DummyJSON](https://github.com/Ovi/DummyJSON/).
 - The concept for this problem is credited to the company: [Gradial](https://gradial.com).
 
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+See the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html) file or visit [gnu.org](https://www.gnu.org/licenses/gpl-3.0.html) for full terms.
+
+This project is for educational and research purposes. Respect the license terms of third-party datasets and models.
+
