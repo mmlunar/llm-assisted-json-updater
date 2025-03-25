@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document provides a brief overview of the solution approach and related details for the take-home assignment. It will guide the reader through the code to offer a clearer understanding of how the solution works.
+This document provides a brief overview of the solution approach and related details for the json file updater project. It will guide the reader through the code to offer a clearer understanding of how the solution works.
 
 ## Solution Approach
 
@@ -14,7 +14,7 @@ The task at hand is to edit a JSON file based on given instructions. These instr
 
 ### Solution Overview
 
-The solution leverages OpenAI’s API to process the instructions and generate the required results, which are then saved to the JSON file. While this may sound straightforward, there is a significant challenge posed by the size limitations of the input and output texts that OpenAI’s API can handle. If the text exceeds the API’s token limit, it cannot be processed as a single request. Therefore, the solution must process the task in smaller batches and then combine the results. To address this challenge, the following approach is adopted:
+The solution leverages OpenAI’s API to process the instructions and generate the required results, which are then saved to the JSON file. While this may sound straightforward, there is a significant challenge posed by the size (token) limitations of the input and output texts that OpenAI’s API can handle. If the text exceeds the API’s token limit, it cannot be processed as a single request. Therefore, the solution must process the task in smaller batches and then combine the results. To address this challenge, the following approach is adopted:
 
 - **Handling Large Lists in JSON:** Many JSON files contain large lists, which often account for the majority of the tokens. When dealing with large JSON files, the lists become the primary focus for batch processing. The strategy is to traverse the JSON object, identify the lists, and if any list exceeds a threshold token count, replace it with a dummy object for the time being. The list can then be processed later in smaller batches. For counting tokens, the `tiktoken` library from OpenAI is used.
 
