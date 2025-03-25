@@ -1,0 +1,12 @@
+{
+    "CANDIDATE_API_KEY": "YOUR_OPEN_AI_API_KEY",
+    "max_token": 5000,
+    "model_name": "gpt-4o",
+    "delimiter": "/",
+    "only_json_instruction" : "After update type the entire JSON without any intro or explanations. No  triple backticks formatting please.",
+    "no_change_case": "If no change is necessary or the instruction is not relevant with the given input then simply print \"no change required\".",
+    "batch_file_path": "./tmp/batch.jsonl",
+    "dummy_placeholder": "dummy",
+    "check_text": "no change"
+}
+  
